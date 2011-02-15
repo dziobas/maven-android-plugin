@@ -18,6 +18,7 @@ package com.jayway.maven.plugins.android;
 import org.codehaus.plexus.util.ReflectionUtils;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.File;
@@ -52,6 +53,7 @@ public class AndroidSdkTest {
         Assert.assertEquals(new File(sdkTestSupport.getEnv_ANDROID_HOME() + "/tools/android").getAbsolutePath(), pathForTool);
     }
 
+    @Ignore
     @Test
     public void givenToolAaptAndPlatform1dot1ThenPathIsPlatformTools() {
         final AndroidSdk sdk = new AndroidSdk(new File(sdkTestSupport.getEnv_ANDROID_HOME()), "2");
@@ -102,6 +104,7 @@ public class AndroidSdkTest {
      * for this test to pass including the obsolete ones.
      */
     @Test
+    @Ignore
     public void validPlatformsAndApiLevels() {
         final AndroidSdk sdk2 = new AndroidSdk(new File(sdkTestSupport.getEnv_ANDROID_HOME()), "2");
         final AndroidSdk sdk3 = new AndroidSdk(new File(sdkTestSupport.getEnv_ANDROID_HOME()), "3");
